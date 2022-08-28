@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/motion_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/circular_background">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/detail_breed_image"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:elevation="@dimen/margin_small"
+            android:scaleType="centerCrop"
+            app:applyTransformation="@{viewModel.applyTransformation(50,0)}"
+            app:imageUrl="@{viewModel.data.image.url}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:placeholder="@{R.drawable.bgdefault_bg}" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/container_1"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginHorizontal="@dimen/margin_huge"
+            android:layout_marginTop="350dp"
+            android:background="@drawable/circular_background"
+            android:elevation="@dimen/margin_small"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/breed_image"
+                android:layout_width="@dimen/margin_huge"
+                android:layout_height="@dimen/margin_huge"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="@dimen/margin_large"
+                android:layout_marginTop="@dimen/margin_x_medium"
+                android:elevation="@dimen/margin_small"
+                app:cardCornerRadius="40dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    app:imageUrl="@{viewModel.data.image.url}"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:placeholder="@{R.drawable.bgdefault_bg}" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/breed_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_large"
+                android:layout_marginEnd="@dimen/margin_large"
+                android:text="@{viewModel.data.name}"
+                android:textColor="#4a4a4a"
+                android:textSize="@dimen/textSize_large"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/breed_image"
+                app:layout_constraintTop_toTopOf="@id/breed_image"
+                tools:text="American curl" />
+
+            <RatingBar
+                android:id="@+id/adaptability"
+                style="@style/RatingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_x_medium"
+                android:layout_marginEnd="@dimen/margin_large"
+                android:isIndicator="true"
+                android:maxHeight="15dp"
+                android:minHeight="15dp"
+                android:rating="@{viewModel.data.adaptability}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/breed_name"
+                tools:rating="3.5" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/breed_origin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_x_medium"
+                android:text="@{viewModel.data.origin}"
+                app:layout_constraintStart_toStartOf="@id/breed_name"
+                app:layout_constraintTop_toBottomOf="@id/breed_name"
+                tools:text="Egypt" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/breed_span"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_x_medium"
+                android:layout_marginEnd="@dimen/margin_large"
+                android:text="@{viewModel.spanText}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/breed_name"
+                tools:text="14-15 years" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/detail_recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="@dimen/margin_huge"
+            android:layout_marginTop="@dimen/margin_huge"
+            android:layout_marginBottom="@dimen/margin_huge"
+            app:adapter="@{viewModel.adapter}"
+            app:itemsList="@{viewModel.itemsList}"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/container_1" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <data>
+
+        <import type="com.example.intuit.R" />
+
+        <variable
+            name="viewModel"
+            type="com.example.intuit.viewModel.DetailViewModel" />
+    </data>
+</layout>

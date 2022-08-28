@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="image_width">120dp</dimen>
+    <dimen name="image_height">120dp</dimen>
+    <dimen name="recycler_item_height">100dp</dimen>
+    <dimen name="margin_large">16dp</dimen>
+    <dimen name="textSize_large">20dp</dimen>
+    <dimen name="margin_small">6dp</dimen>
+    <dimen name="margin_tiny">4dp</dimen>
+    <dimen name="textsize_small">10dp</dimen>
+    <dimen name="detal_image_width">340dp</dimen>
+    <dimen name="detail_image_height">230dp</dimen>
+    <dimen name="error_image_width">150dp</dimen>
+    <dimen name="error_image_height">150dp</dimen>
+    <dimen name="shimmer_textView_width">220dp</dimen>
+    <dimen name="shimmer_textView_height">10dp</dimen>
+    <dimen name="shimmer_textView_height_large">20dp</dimen>
+    <dimen name="textsize_medium">16dp</dimen>
+    <dimen name="margin_x_medium">12dp</dimen>
+</resources>

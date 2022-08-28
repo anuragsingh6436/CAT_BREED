@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/detail_view1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_large"
+        android:layout_marginTop="@dimen/margin_large"
+        android:background="@drawable/circular_background"
+        android:elevation="@dimen/elevation_small"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <View
+            android:id="@+id/image_view1"
+            android:layout_width="@dimen/image_width"
+            android:layout_height="@dimen/image_width"
+            android:background="@drawable/shimmer_gradient_drawable"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/textView_1"
+            android:layout_width="@dimen/shimmer_textView_width"
+            android:layout_height="@dimen/shimmer_textView_height_large"
+            android:layout_marginStart="@dimen/margin_large"
+            android:layout_marginTop="@dimen/margin_large"
+            android:background="@drawable/shimmer_gradient_drawable"
+            app:layout_constraintStart_toEndOf="@id/image_view1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/textView_1_1"
+            android:layout_width="@dimen/shimmer_textView_width"
+            android:layout_height="@dimen/shimmer_textView_height"
+            android:layout_marginStart="@dimen/margin_large"
+            android:layout_marginTop="@dimen/textsize_small"
+            android:background="@drawable/shimmer_gradient_drawable"
+            app:layout_constraintStart_toEndOf="@id/image_view1"
+            app:layout_constraintTop_toBottomOf="@id/textView_1" />
+
+        <View
+            android:layout_width="@dimen/shimmer_textView_width"
+            android:layout_height="@dimen/shimmer_textView_height"
+            android:layout_marginStart="@dimen/margin_large"
+            android:layout_marginTop="@dimen/textsize_small"
+            android:background="@drawable/shimmer_gradient_drawable"
+            app:layout_constraintStart_toEndOf="@id/image_view1"
+            app:layout_constraintTop_toBottomOf="@id/textView_1_1" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/detail_view2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_large"
+        android:layout_marginTop="@dimen/margin_large"
+        android:background="@drawable/circular_background"
+        android:elevation="@dimen/elevation_small"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/detail_view1">
+
+        <View
+            android:id="@+id/image_view2"
+            android:layout_width="@dimen/image_width"
+            android:layout_height="@dimen/image_width"
+            android:background="@drawable/shimmer_gradient_drawable"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/textView_2"
+            android:layout_width="@dimen/shimmer_textView_width"
+            android:layout_height="@dimen/shimmer_textView_height_large"
+            android:layout_marginStart="@dimen/margin_large"
+            android:layout_marginTop="@dimen/margin_large"
+            android:background="@drawable/shimmer_gradient_drawable"
+            app:layout_constraintStart_toEndOf="@id/image_view2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/textView_2_2"
+            android:layout_width="@dimen/shimmer_textView_width"
+            android:layout_height="@dimen/shimmer_textView_height"
+            android:layout_marginStart="@dimen/margin_large"
+            android:layout_marginTop="@dimen/textsize_small"
+            android:background="@drawable/shimmer_gradient_drawable"
+            app:layout_constraintStart_toEndOf="@id/image_view2"
+            app:layout_constraintTop_toBottomOf="@id/textView_2" />
+
+        <View
+            android:layout_width="@dimen/shimmer_textView_width"
+            android:layout_height="@dimen/shimmer_textView_height"
+            android:layout_marginStart="@dimen/margin_large"
+            android:layout_marginTop="@dimen/textsize_small"
+            android:background="@drawable/shimmer_gradient_drawable"
+            app:layout_constraintStart_toEndOf="@id/image_view2"
+            app:layout_constraintTop_toBottomOf="@id/textView_2_2" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/detail_view3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_large"
+        android:layout_marginTop="@dimen/margin_large"
+        android:background="@drawable/circular_background"
+        android:elevation="@dimen/elevation_small"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/detail_view2">
+
+        <View
+            android:id="@+id/image_view3"
+            android:layout_width="@dimen/image_width"
+            android:layout_height="@dimen/image_width"
+            android:background="@drawable/shimmer_gradient_drawable"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/textView_3"
+            android:layout_width="@dimen/shimmer_textView_width"
+            android:layout_height="@dimen/shimmer_textView_height_large"
+            android:layout_marginStart="@dimen/margin_large"
+            android:layout_marginTop="@dimen/margin_large"
+            android:background="@drawable/shimmer_gradient_drawable"
+            app:layout_constraintStart_toEndOf="@id/image_view3"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/textView_3_3"
+            android:layout_width="250dp"
+            android:layout_height="10dp"
+            android:layout_marginStart="@dimen/margin_large"
+            android:layout_marginTop="@dimen/textsize_small"
+            android:background="@drawable/shimmer_gradient_drawable"
+            app:layout_constraintStart_toEndOf="@id/image_view3"
+            app:layout_constraintTop_toBottomOf="@id/textView_3" />
+
+        <View
+            android:layout_width="@dimen/shimmer_textView_width"
+            android:layout_height="@dimen/shimmer_textView_height"
+            android:layout_marginStart="@dimen/margin_large"
+            android:layout_marginTop="@dimen/textsize_small"
+            android:background="@drawable/shimmer_gradient_drawable"
+            app:layout_constraintStart_toEndOf="@id/image_view3"
+            app:layout_constraintTop_toBottomOf="@id/textView_3_3" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/detail_view4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_large"
+        android:layout_marginTop="@dimen/margin_large"
+        android:background="@drawable/circular_background"
+        android:elevation="@dimen/elevation_small"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/detail_view3">
+
+        <View
+            android:id="@+id/image_view4"
+            android:layout_width="@dimen/image_width"
+            android:layout_height="@dimen/image_width"
+            android:background="@drawable/shimmer_gradient_drawable"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/textView_4"
+            android:layout_width="@dimen/shimmer_textView_width"
+            android:layout_height="@dimen/shimmer_textView_height_large"
+            android:layout_marginStart="@dimen/margin_large"
+            android:layout_marginTop="@dimen/margin_large"
+            android:background="@drawable/shimmer_gradient_drawable"
+            app:layout_constraintStart_toEndOf="@id/image_view4"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/textView_4_4"
+            android:layout_width="@dimen/shimmer_textView_width"
+            android:layout_height="@dimen/shimmer_textView_height"
+            android:layout_marginStart="@dimen/margin_large"
+            android:layout_marginTop="@dimen/textsize_small"
+            android:background="@drawable/shimmer_gradient_drawable"
+            app:layout_constraintStart_toEndOf="@id/image_view4"
+            app:layout_constraintTop_toBottomOf="@id/textView_4" />
+
+        <View
+            android:layout_width="@dimen/shimmer_textView_width"
+            android:layout_height="@dimen/shimmer_textView_height"
+            android:layout_marginStart="@dimen/margin_large"
+            android:layout_marginTop="@dimen/textsize_small"
+            android:background="@drawable/shimmer_gradient_drawable"
+            app:layout_constraintStart_toEndOf="@id/image_view4"
+            app:layout_constraintTop_toBottomOf="@id/textView_4_4" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/detail_view5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_large"
+        android:layout_marginTop="@dimen/margin_large"
+        android:background="@drawable/circular_background"
+        android:elevation="@dimen/elevation_small"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/detail_view4">
+
+        <View
+            android:id="@+id/image_view5"
+            android:layout_width="@dimen/image_width"
+            android:layout_height="@dimen/image_width"
+            android:background="@drawable/shimmer_gradient_drawable"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/textView_5"
+            android:layout_width="@dimen/shimmer_textView_width"
+            android:layout_height="@dimen/shimmer_textView_height_large"
+            android:layout_marginStart="@dimen/margin_large"
+            android:layout_marginTop="@dimen/margin_large"
+            android:background="@drawable/shimmer_gradient_drawable"
+            app:layout_constraintStart_toEndOf="@id/image_view5"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/textView_5_5"
+            android:layout_width="@dimen/shimmer_textView_width"
+            android:layout_height="@dimen/shimmer_textView_height"
+            android:layout_marginStart="@dimen/margin_large"
+            android:layout_marginTop="@dimen/textsize_small"
+            android:background="@drawable/shimmer_gradient_drawable"
+            app:layout_constraintStart_toEndOf="@id/image_view5"
+            app:layout_constraintTop_toBottomOf="@id/textView_5" />
+
+        <View
+            android:layout_width="@dimen/shimmer_textView_width"
+            android:layout_height="@dimen/shimmer_textView_height"
+            android:layout_marginStart="@dimen/margin_large"
+            android:layout_marginTop="@dimen/textsize_small"
+            android:background="@drawable/shimmer_gradient_drawable"
+            app:layout_constraintStart_toEndOf="@id/image_view5"
+            app:layout_constraintTop_toBottomOf="@id/textView_5_5" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/detail_view6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_large"
+        android:layout_marginTop="@dimen/margin_large"
+        android:background="@drawable/circular_background"
+        android:elevation="@dimen/elevation_small"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/detail_view5">
+
+        <View
+            android:id="@+id/image_view6"
+            android:layout_width="@dimen/image_width"
+            android:layout_height="@dimen/image_width"
+            android:background="@drawable/shimmer_gradient_drawable"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/textView_6"
+            android:layout_width="@dimen/shimmer_textView_width"
+            android:layout_height="@dimen/shimmer_textView_height_large"
+            android:layout_marginStart="@dimen/margin_large"
+            android:layout_marginTop="@dimen/margin_large"
+            android:background="@drawable/shimmer_gradient_drawable"
+            app:layout_constraintStart_toEndOf="@id/image_view6"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/textView_6_6"
+            android:layout_width="@dimen/shimmer_textView_width"
+            android:layout_height="@dimen/shimmer_textView_height"
+            android:layout_marginStart="@dimen/margin_large"
+            android:layout_marginTop="@dimen/textsize_small"
+            android:background="@drawable/shimmer_gradient_drawable"
+            app:layout_constraintStart_toEndOf="@id/image_view6"
+            app:layout_constraintTop_toBottomOf="@id/textView_6" />
+
+        <View
+            android:layout_width="@dimen/shimmer_textView_width"
+            android:layout_height="@dimen/shimmer_textView_height"
+            android:layout_marginStart="@dimen/margin_large"
+            android:layout_marginTop="@dimen/textsize_small"
+            android:background="@drawable/shimmer_gradient_drawable"
+            app:layout_constraintStart_toEndOf="@id/image_view6"
+            app:layout_constraintTop_toBottomOf="@id/textView_6_6" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/motion_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_large"
+        android:onClick="@{() -> dataModel.onItemClick()}">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/breed_image"
+            android:layout_width="@dimen/image_width"
+            android:layout_height="@dimen/image_height"
+            android:elevation="@dimen/margin_small"
+            android:scaleType="fitXY"
+            app:applyTransformation="@{dataModel.applyTransformation(50,0)}"
+            app:imageUrl="@{dataModel.listItemData.imageUrl}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:placeholder="@{R.drawable.bgdefault_bg}" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/recycler_item_height"
+            android:layout_marginTop="@dimen/textsize_small"
+            android:background="@drawable/circular_background"
+            android:elevation="@dimen/margin_tiny"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/breed_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/recycler_textView_margin_start"
+                android:layout_marginTop="@dimen/margin_x_medium"
+                android:layout_marginEnd="@dimen/margin_large"
+                android:text="@{dataModel.listItemData.name}"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textSize_large"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/heart_icon"
+                android:layout_width="@dimen/textsize_medium"
+                android:layout_height="@dimen/textsize_medium"
+                android:layout_marginTop="@dimen/margin_small"
+                android:src="@drawable/heart_icon"
+                android:tint="#4a4a4a"
+                app:layout_constraintStart_toStartOf="@id/breed_name"
+                app:layout_constraintTop_toBottomOf="@id/breed_name" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/breed_temperament"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_tiny"
+                android:layout_marginEnd="@dimen/margin_large"
+                android:maxLines="2"
+                android:text="@{dataModel.listItemData.temperament}"
+                android:textSize="@dimen/textsize_small"
+                app:layout_constraintBottom_toBottomOf="@id/heart_icon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/heart_icon"
+                app:layout_constraintTop_toTopOf="@id/heart_icon" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/location_image"
+                android:layout_width="@dimen/textSize_large"
+                android:layout_height="@dimen/textSize_large"
+                android:layout_marginTop="@dimen/textsize_small"
+                android:src="@drawable/ic_location_peg"
+                app:layout_constraintStart_toStartOf="@id/heart_icon"
+                app:layout_constraintTop_toBottomOf="@id/heart_icon" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/breed_origin"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_tiny"
+                android:layout_marginEnd="@dimen/margin_large"
+                android:text="@{dataModel.listItemData.origin}"
+                android:textSize="@dimen/textsize_small"
+                app:layout_constraintBottom_toBottomOf="@id/location_image"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/location_image"
+                app:layout_constraintTop_toTopOf="@id/location_image" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <data>
+
+        <import type="com.example.intuit.R" />
+
+        <variable
+            name="dataModel"
+            type="com.example.intuit.dataModel.ListItemDataModel" />
+    </data>
+</layout>
