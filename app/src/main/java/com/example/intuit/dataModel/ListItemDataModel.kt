@@ -9,7 +9,7 @@ import com.example.intuit.base.model.Event
 import com.example.intuit.base.model.ListItemData
 import com.example.intuit.constants.EventConstants
 
-class ListItemDataModel(val listItemData: ListItemData,val position:Int, private val eventStream:MutableLiveData<Event>) :
+class ListItemDataModel(val listItemData: ListItemData,val position:Int,val eventStream:MutableLiveData<Event>) :
     BaseRecyclerItem {
 
     fun applyTransformation(radius:Int,margin:Int): RoundedTransformation {
