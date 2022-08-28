@@ -9,7 +9,7 @@ import com.example.intuit.base.model.ListItemData
 import com.example.intuit.model.response.BreedData
 import javax.inject.Inject
 
-class ListingActivityHelper @Inject constructor() {
+class ListingDataHelper @Inject constructor() {
 
     fun convertResponse(
         data: List<BreedData>,

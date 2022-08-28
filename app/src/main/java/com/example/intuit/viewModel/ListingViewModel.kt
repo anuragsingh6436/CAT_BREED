@@ -8,21 +8,19 @@ import com.example.intuit.base.adapter.BaseRecyclerItem
 import com.example.intuit.base.viewModel.BaseViewModel
 import com.example.intuit.constants.Constants
 import com.example.intuit.constants.Constants.LISTING_URL
-import com.example.intuit.helper.ListingActivityHelper
+import com.example.intuit.helper.ListingDataHelper
 import com.example.intuit.base.model.Event
 import com.example.intuit.constants.EventConstants
 import com.example.intuit.repository.ListingRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
 import javax.inject.Inject
 
 @HiltViewModel
 class ListingViewModel @Inject constructor(
     val repository: ListingRepository,
-    val helper: ListingActivityHelper
+    val helper: ListingDataHelper
 ) : BaseViewModel() {
 
     val adapter = ListingAdapter()

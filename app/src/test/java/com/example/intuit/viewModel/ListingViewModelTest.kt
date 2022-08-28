@@ -4,11 +4,10 @@ import com.example.intuit.InstantExecutorExtension
 import com.example.intuit.constants.Constants
 import com.example.intuit.constants.EventConstants
 import com.example.intuit.dataProvider.DummyDataProvider
-import com.example.intuit.helper.ListingActivityHelper
+import com.example.intuit.helper.ListingDataHelper
 import com.example.intuit.mockkCoroutine
 import com.example.intuit.repository.ListingRepository
 import com.example.intuit.unMockkCoroutine
-import com.example.intuit.viewModel.ListingViewModel
 import com.jraska.livedata.test
 import io.mockk.MockKAnnotations
 import io.mockk.every
@@ -24,7 +23,7 @@ import org.junit.jupiter.api.extension.ExtendWith
 @ExtendWith(InstantExecutorExtension::class)
 class ListingViewModelTest {
     private val repository: ListingRepository = mockk()
-    private val helper: ListingActivityHelper = mockk()
+    private val helper: ListingDataHelper = mockk()
     private lateinit var viewModel: ListingViewModel
     private val dataProvider = DummyDataProvider()
 
